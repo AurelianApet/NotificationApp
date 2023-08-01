@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notificationApp.Pages.CustomUserPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="12*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#70A83B"
+                Grid.Row="0"
+                >
+                <Label
+                    Text="EN LINEA"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="30"
+                    >
+                </Label>
+            </StackLayout>
+            <StackLayout
+                Grid.Row="1"
+                >
+                <Label
+                    Text=""
+                    x:Name="labTitle"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Margin="0,20,0,20"
+                    FontSize="25"
+                    VerticalOptions="StartAndExpand">
+                </Label>
+                <ScrollView
+                    HeightRequest="600"
+                    WidthRequest="400"
+                    >
+                    <StackLayout BackgroundColor="White" 
+                        Spacing="20"
+                        Margin="10,0,10,30"
+                        VerticalOptions="FillAndExpand"  
+                        HorizontalOptions="FillAndExpand">
+                        <WebView
+                            x:Name="webContent"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            />
+                    </StackLayout>
+                </ScrollView>
+                <Button
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        CornerRadius="5"
+                        BackgroundColor="#70A83B"
+                        x:Name="btnBack"
+                        TextColor="White"
+                        Text="Back"                        
+                        >
+                </Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notificationApp.Pages.NotificationPage"
+             BackgroundImage="back.png"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#70A83B"
+                Grid.Row="0"
+                >
+                <Label
+                    Text="EN LINEA"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="30"
+                    >
+                </Label>
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Orientation="Vertical"
+                Grid.Row="1"
+                >
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Text="SECCION DE AVISOS OFICIALES"
+                    TextColor="White"
+                    Font="20"
+                    >
+                </Label>
+                <Image
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Source="mailIcon.png"
+                    HeightRequest="80"
+                    WidthRequest="80"
+                    >
+                </Image>
+                <Label
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Margin="10,0,0,0"
+                    Text=" ULTIMOS MENSAJES ENVIADOS"
+                    TextColor="White"
+                    Font="20"
+                    >
+                </Label>
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand"
+                Grid.Row="2"
+                >
+                <ScrollView>
+                    <StackLayout BackgroundColor="Transparent"
+                        Spacing="20"
+                        x:Name="notificationContainer"
+                        VerticalOptions="Fill"  
+                        HorizontalOptions="FillAndExpand">
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

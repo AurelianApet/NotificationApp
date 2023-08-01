@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389669234070",
+    "firebase_url": "https://notificationapp-14bd8.firebaseio.com",
+    "project_id": "notificationapp-14bd8",
+    "storage_bucket": "notificationapp-14bd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389669234070:android:8afaabab3475d7a029a9b7",
+        "android_client_info": {
+          "package_name": "com.xamarin.notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389669234070-o99eacv1geukhb3ddn59rfstvc76rht6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN2Ckpk-em1Ho2WDD3vsUjueniysYnxU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389669234070-o99eacv1geukhb3ddn59rfstvc76rht6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

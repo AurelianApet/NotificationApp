@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="notificationApp.Pages.LoginPage"
+             xmlns:controls="clr-namespace:notificationApp.Controls"
+             BackgroundImage="loginBackground.png"
+             >
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="40*"/>
+                </Grid.RowDefinitions>
+                <Label 
+                    Text="BIENVENIDO"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Font="35"
+                    VerticalOptions="EndAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label 
+                    Text="INGRESA TUS DATOS"
+                    Grid.Row="1"
+                    Font="18"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Grid
+                    Grid.Row="2"
+                    VerticalOptions="Fill"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="18*"/>
+                        <RowDefinition Height="18*"/>
+                        <RowDefinition Height="24*"/>
+                    </Grid.RowDefinitions>
+                    <RelativeLayout
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="300"
+                        Grid.Row="0"
+                        >
+                        <Image Source="entryBack.png"></Image>
+                        <StackLayout
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-16}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=48}"
+                            Orientation="Horizontal">
+                            <Image Source="userBack.png" Scale="0.7"></Image>
+                            <controls:xEntry x:Name="entryUserName" TextColor="White" Placeholder="User Name" PlaceholderColor="White" HorizontalOptions="FillAndExpand" Text=""></controls:xEntry>
+                        </StackLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="300"
+                        Grid.Row="1"
+                        >
+                        <Image Source="entryBack.png"></Image>
+                        <StackLayout
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-16}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=48}"
+                            Orientation="Horizontal">
+                            <Image Source="passwordBack.png" Scale="0.7"></Image>
+                            <controls:xEntry x:Name="entryPwd" TextColor="White" Placeholder="Password" IsPassword="True" PlaceholderColor="White" HorizontalOptions="FillAndExpand" Text=""></controls:xEntry>
+                        </StackLayout>
+                    </RelativeLayout>
+                    <Button
+                        TextColor="White"
+                        Grid.Row="2"
+                        Text="INGRESAR"
+                        Font="20"
+                        x:Name="btnLogin"
+                        Clicked="btnLoginClicked"
+                        CornerRadius="5"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="EndAndExpand"
+                        WidthRequest="200"
+                        BackgroundColor="#70A83B"
+                    >
+                    </Button>
+                </Grid>
+                <StackLayout
+                    Grid.Row="3">
+                </StackLayout>
+            </Grid>
+            <ContentView x:Name="popupImageView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="White">
+                        <ActivityIndicator x:Name="activityIndicator" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="30" HeightRequest="30" ></ActivityIndicator>
+                        <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Loading..."></Label>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
